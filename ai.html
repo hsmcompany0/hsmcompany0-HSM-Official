@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HSM AI | Hyper Sonic Mind</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+                HSM
+            </a>
+
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="ai.html">AI Chat</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- AI HERO -->
+    <section class="page-hero">
+        <img
+    src="../image/hsm-ai.png"
+    alt="HSM Projects and Gaming"
+    class="page-image"
+>
+        <div class="container hero-content">
+
+            <span class="hero-badge">
+                HSM INTELLIGENCE
+            </span>
+
+            <h1>
+                Intelligent AI Experience
+            </h1>
+
+            <p>
+                Meet the HSM AI Assistant — your smart guide to
+                Hyper Sonic Mind.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- CHATBOT -->
+    <section class="ai-chat-section">
+
+        <div class="container">
+
+            <div class="chat-wrapper">
+
+                <!-- CHAT HEADER -->
+                <div class="chat-header">
+
+                    <div>
+                        <h2>HSM AI Assistant</h2>
+
+                        <div class="ai-status">
+                            <span class="status-dot"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="clear-chat"
+                        id="clearChat">
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <!-- CHAT MESSAGES -->
+                <div
+                    class="chat-messages"
+                    id="chatMessages">
+
+                    <div class="message ai-message">
+
+                        <div class="message-avatar">
+                            H
+                        </div>
+
+                        <div class="message-content">
+
+                            <strong>HSM AI</strong>
+
+                            <p>
+                                Hello! I'm HSM AI Assistant.
+                                Ask me about Hyper Sonic Mind,
+                                our services, projects, technology,
+                                and vision.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHAT INPUT -->
+                <form
+                    class="chat-input-area"
+                    id="chatForm">
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Ask HSM AI something..."
+                        autocomplete="off"
+                        required>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+                        Send
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © <span id="currentYear"></span>
+                Hyper Sonic Mind. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- WEBSITE SCRIPT -->
+    <script src="../script.js"></script>
+
+
+    <!-- HSM FREE CHATBOT -->
+    <script>
+
+        const chatForm = document.getElementById("chatForm");
+        const chatInput = document.getElementById("chatInput");
+        const chatMessages = document.getElementById("chatMessages");
+        const clearChat = document.getElementById("clearChat");
+
+
+        /*
+        ==========================================
+        HSM FREE CHATBOT KNOWLEDGE
+        ==========================================
+        */
+
+        function getHSMResponse(message) {
+
+            const text = message.toLowerCase().trim();
+
+
+            // GREETINGS
+            if (
+                text === "hi" ||
+                text === "hello" ||
+                text === "hey" ||
+                text.includes("good morning") ||
+                text.includes("good evening")
+            ) {
+
+                return "Hello! Welcome to HSM. I'm HSM AI Assistant. How can I help you today?";
+
+            }
+
+
+            // WHAT IS HSM
+            if (
+                text.includes("what is hsm") ||
+                text.includes("about hsm") ||
+                text.includes("hyper sonic mind")
+            ) {
+
+                return "Hyper Sonic Mind (HSM) is a future-oriented technology brand focused on AI, digital systems, smart innovation, and technology solutions.";
+
+            }
+
+
+            // SERVICES
+            if (
+                text.includes("service") ||
+                text.includes("services") ||
+                text.includes("what do you do")
+            ) {
+
+                return "HSM focuses on AI Solutions, Software Development, and Automation. Our goal is to build secure, scalable, and useful technology systems.";
+
+            }
+
+
+            // AI
+            if (
+                text.includes("ai") ||
+                text.includes("artificial intelligence")
+            ) {
+
+                return "HSM explores AI-based solutions designed to make work easier, smarter, and more efficient.";
+
+            }
+
+
+            // SOFTWARE
+            if (
+                text.includes("software") ||
+                text.includes("development")
+            ) {
+
+                return "HSM works on modern software and digital systems with a focus on useful experiences, scalability, and long-term improvement.";
+
+            }
+
+
+            // AUTOMATION
+            if (
+                text.includes("automation") ||
+                text.includes("automate")
+            ) {
+
+                return "HSM explores automation systems that can reduce repetitive work and create smarter digital workflows.";
+
+            }
+
+
+            // PROJECTS
+            if (
+                text.includes("project") ||
+                text.includes("projects")
+            ) {
+
+                return "HSM projects include HSM AI, HSM Game, HSM Website, Smart Systems, Gaming Experience, and Future Innovation.";
+
+            }
+
+
+            // HSM GAME
+            if (
+                text.includes("game") ||
+                text.includes("gaming")
+            ) {
+
+                return "HSM Game is part of the HSM technology and gaming experience. HSM focuses on real gameplay, technology, setups, and future gaming experiences.";
+
+            }
+
+
+            // FOUNDER
+            if (
+                text.includes("founder") ||
+                text.includes("ceo") ||
+                text.includes("who created hsm")
+            ) {
+
+                return "Virendra is the Founder & CEO of Hyper Sonic Mind (HSM).";
+
+            }
+
+
+            // VISION
+            if (
+                text.includes("vision") ||
+                text.includes("future")
+            ) {
+
+                return "HSM's vision is to explore AI and smart technology systems that make people's work easier and can evolve with future needs.";
+
+            }
+
+
+            // MISSION
+            if (
+                text.includes("mission") ||
+                text.includes("goal")
+            ) {
+
+                return "HSM's mission focuses on AI-based solutions, secure and scalable systems, and long-term smart growth.";
+
+            }
+
+
+            // CONTACT
+            if (
+                text.includes("contact") ||
+                text.includes("email") ||
+                text.includes("reach hsm")
+            ) {
+
+                return "You can use the Contact page on the HSM website to connect with Hyper Sonic Mind.";
+
+            }
+
+
+            // THANK YOU
+            if (
+                text.includes("thank") ||
+                text.includes("thanks")
+            ) {
+
+                return "You're welcome! I'm always ready to help you explore HSM.";
+
+            }
+
+
+            // BYE
+            if (
+                text === "bye" ||
+                text.includes("goodbye")
+            ) {
+
+                return "Goodbye! Keep exploring the future with HSM.";
+
+            }
+
+
+            // DEFAULT RESPONSE
+            return "I'm currently the HSM Free Assistant. I can help you with HSM, our services, projects, AI, software, automation, gaming, vision, mission, and contact information.";
+
+        }
+
+
+        /*
+        ==========================================
+        ADD MESSAGE
+        ==========================================
+        */
+
+        function addMessage(message, type) {
+
+            const messageElement = document.createElement("div");
+
+            messageElement.className =
+                `message ${type === "user" ? "user-message" : "ai-message"}`;
+
+
+            const avatar = document.createElement("div");
+
+            avatar.className = "message-avatar";
+
+            avatar.textContent =
+                type === "user" ? "U" : "H";
+
+
+            const content = document.createElement("div");
+
+            content.className = "message-content";
+
+
+            const name = document.createElement("strong");
+
+            name.textContent =
+                type === "user" ? "You" : "HSM AI";
+
+
+            const paragraph = document.createElement("p");
+
+            paragraph.textContent = message;
+
+
+            content.appendChild(name);
+
+            content.appendChild(paragraph);
+
+
+            messageElement.appendChild(avatar);
+
+            messageElement.appendChild(content);
+
+
+            chatMessages.appendChild(messageElement);
+
+
+            chatMessages.scrollTop =
+                chatMessages.scrollHeight;
+
+        }
+
+
+        /*
+        ==========================================
+        TYPING EFFECT
+        ==========================================
+        */
+
+        function showTyping() {
+
+            const typing = document.createElement("div");
+
+            typing.className = "message ai-message";
+
+            typing.id = "typingMessage";
+
+
+            typing.innerHTML = `
+                <div class="message-avatar">H</div>
+
+                <div class="message-content">
+                    <strong>HSM AI</strong>
+                    <p>Thinking...</p>
+                </div>
+            `;
+
+
+            chatMessages.appendChild(typing);
+
+            chatMessages.scrollTop =
+                chatMessages.scrollHeight;
+
+        }
+
+
+        function removeTyping() {
+
+            const typing =
+                document.getElementById("typingMessage");
+
+            if (typing) {
+
+                typing.remove();
+
+            }
+
+        }
+
+
+        /*
+        ==========================================
+        CHAT SUBMIT
+        ==========================================
+        */
+
+        chatForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const message =
+                chatInput.value.trim();
+
+
+            if (!message) {
+
+                return;
+
+            }
+
+
+            // USER MESSAGE
+            addMessage(message, "user");
+
+
+            // CLEAR INPUT
+            chatInput.value = "";
+
+
+            // SHOW THINKING
+            showTyping();
+
+
+            // SMALL AI DELAY
+            setTimeout(function() {
+
+                removeTyping();
+
+
+                const response =
+                    getHSMResponse(message);
+
+
+                addMessage(response, "ai");
+
+
+            }, 600);
+
+        });
+
+
+        /*
+        ==========================================
+        CLEAR CHAT
+        ==========================================
+        */
+
+        clearChat.addEventListener("click", function() {
+
+            chatMessages.innerHTML = `
+                <div class="message ai-message">
+
+                    <div class="message-avatar">
+                        H
+                    </div>
+
+                    <div class="message-content">
+
+                        <strong>HSM AI</strong>
+
+                        <p>
+                            Hello! I'm HSM AI Assistant.
+                            Ask me about Hyper Sonic Mind,
+                            our services, projects, technology,
+                            and vision.
+                        </p>
+
+                    </div>
+
+                </div>
+            `;
+
+        });
+
+    </script>
+
+</body>
+</html>
